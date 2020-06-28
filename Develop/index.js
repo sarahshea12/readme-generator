@@ -75,14 +75,14 @@ function init() {
     .then((response) => {
 
         var text = `
-    https://img.shields.io/github/languages/top/${response.github}/portfolio
-    ### Title
+    [![${response.repo}](https://img.shields.io/github/languages/top/${response.github}/${response.repo})](https://img.shields.io/github/languages/top/${response.github}/${response.repo})
+    ## Title
     ${response.title}
 
-    ### Description
+    ## Description
     ${response.desc}
 
-    ### Table of Contents
+    ## Table of Contents
     - [Installation](#installation)
     - [Usage](#usage)
     - [Contribution](#contribution)
@@ -90,22 +90,22 @@ function init() {
     - [License](#license)
     - [Questions](#questions)
 
-    ### Installation
+    ## Installation
     ${response.install}
 
-    ### Usage
+    ## Usage
     ${response.usage}
 
-    ### Contribution
+    ## Contribution
     ${response.cont}
 
-    ### Test Instructions
+    ## Test Instructions
     ${response.test}
 
-    ### License
+    ## License
     Notice: This application is covered under ${response.license}.
 
-    ### Questions
+    ## Questions
     Feel free to reach out ${response.email} or visit github page at "https://github.com/${response.github}" for more information.
 
     `
